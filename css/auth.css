@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body { 
+	width: 99%;
+	height: 90%;
+	font-family: 'Open Sans', sans-serif;
+    background: #2c2c2c;
+}
+
+html {
+    width: 100%;
+}
+
+.auth-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.auth-input-field {
+    width: 100%;
+    margin-top: 0.6em;
+    padding: 0.6em;
+    border: solid 3px  #444444;
+    border-radius: 10px;
+}
+
+.auth-input-field:focus {
+    border: 3px solid #1faad4;
+}
+
+.auth-button {
+    width: 100%;
+    left: 50%;
+    padding: 0.8em;
+    background-color: rgb(64, 80, 173);
+    border-radius: 13px;
+    margin-top: 1em;
+    border: none;
+
+    color: white;
+    font-size: 1em;
+}
+
+.auth-button:hover {
+    background-color:  rgb(80, 98, 201);
+}
+
+.auth-header { 
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+    letter-spacing:2px; 
+    text-align:center; 
+}
+
+.auth-text {  
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+    letter-spacing:2px; 
+    text-align:center; 
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}  
+
+  
+a:hover {
+    color: rgb(163, 195, 199);
+}
+
+.php-message {
+    color: red;
+    font-size: 1em;
+    text-align: center;
+}
