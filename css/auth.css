@@ -26,8 +26,8 @@ html {
     border-radius: 10px;
 }
 
-.auth-input-field:focus {
-    border: 3px solid #1faad4;
+.auth-input-field:focus { /*Неправильно работает в хроме*/
+    border: 3px solid #1faad4; 
 }
 
 .auth-button {

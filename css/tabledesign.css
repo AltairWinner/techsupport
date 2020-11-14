@@ -1,0 +1,49 @@
+.divTable{
+	display: table;
+    width: 100%;
+    border: none;
+    
+
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+.divTableRow {
+    display: table-row;
+    box-shadow: 0 2px 2px -2px #333;
+}
+
+.divTableRow:hover {
+    background-color: #91abd823;
+}
+.divTableCell, .divTableHead {	
+	display: table-cell;
+	padding: 1em 0.5em;
+}
+
+.divTableHeading {
+	display: table-row; 
+    box-shadow: 0 2px 2px -2px #333;
+    font-weight: 600;
+    color: rgba(99, 99, 99, 0.863);
+    font-size: .875rem;
+    letter-spacing: .0278571429em;
+}
+
+.divTableFoot {
+	display: table-footer-group;
+    font-weight: bold; 
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.linkDesign {
+    text-decoration: none;
+    color: #1967d2;  
+}
+
+.linkDesign:hover {
+    color: #0f376e; 
+}

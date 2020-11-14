@@ -1,0 +1,128 @@
+
+/*Строение страницы*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0;
+}
+
+.page-menu {
+    background-color: white;
+    flex: 15%;
+    max-width: 20em;
+    min-width: 15em;
+    height: 100%;
+    box-shadow: 0 0 1px #333;
+    display:flex;
+    flex-direction: column;
+}
+
+.page-content {
+    flex: 85%;
+    padding: 0 1.6em;
+    overflow: auto;
+    flex-grow: 1;
+    /* Для Firefox */
+    min-height: 0;
+}
+.page-menu-upper {
+    flex-grow: 1;
+}
+
+.page-menu-down {
+    align-self: flex-end;
+    width: 100%;
+}
+
+/*Меню*/
+/*Меню, верх*/
+.menu-header-text {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 0.8em 0;
+    box-shadow: 0 2px 2px -2px #333;
+}
+
+.menu-container {
+    margin-top: 1em;
+}
+
+.menu-link-text {
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    /*честно взято у гугла*/
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.menu-link-text-selected {
+    color: #1967d2;
+    text-decoration: none;
+    /*честно взято у гугла*/
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.menu-link-button {
+    width: auto;
+    padding: 0.8em;
+    margin: 0 0.5em 0 0;
+}
+.menu-link-button:hover {
+    background-color: #e8f0fe70;
+    border-radius: 0 35px 35px 0;  
+}
+
+.menu-link-button-selected {
+    background-color: #e8f0fe;
+    border-radius: 0 35px 35px 0;
+    width: auto;
+    padding: 0.8em;
+    margin: 0 0.5em 0 0;
+}
+
+/*Меню, низ*/
+.menu-bottom-container {
+    padding: 0.8em;
+    box-shadow: 0 -2px 2px -2px #333;
+    flex-direction: column;
+}
+
+.menu-bottom-text {
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    width: 100%;
+    text-align: center;
+}
+.menu-bottom-logout-link {
+    text-decoration: none;
+    color: #1967d2;
+}
+
+.menu-bottom-logout-button {
+    padding: 0.4em;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.menu-bottom-logout-button:hover {
+    background-color: #91abd862;
+    color: #154d9b;
+}
+
+/*Контент*/
+

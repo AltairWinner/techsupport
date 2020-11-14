@@ -38,26 +38,24 @@ if (isset($_POST['btnLogin'])) {
     } else {
         $link = OpenConnection();
 
-        //1. Получаем хэш пароля из БД
-        $query = "SELECT password_hash FROM users WHERE account_login='$login';";
+        //1. Получаем данные из БД
+        $query = "SELECT * FROM users WHERE account_login='$login';";
         $queryResult = mysqli_query($link, $query);
         $row = mysqli_fetch_assoc($queryResult);
+
+        //2. Записываем результаты в переменные
         $hash = $row['password_hash'];
-
-        //2. Получаем роль из БД
-        $query = "SELECT roleid FROM users WHERE account_login='$login';";
-        $query_result = mysqli_query($link, $query);
-        $row = mysqli_fetch_assoc($query_result);
         $roleid = $row['roleid'];
-
+        $id = $row['user_id'];
         //3. Проверяем правильность пароля
         if (password_verify($password, $hash)) {
             //4. Проверяем, активирован ли аккаунт. Аккаунты с ролью 0 являются не активированными.
             if ($roleid == 0)
-                echo '<div class="php-message">Аккаунт не активирован. <br>Пожалуйста, попробуйте войти позже, либо свяжитесь с администрацией.</div>';
+                echo '<div class="php-message">Учетная запись не активирована. <br>Пожалуйста, попробуйте войти позже, либо свяжитесь с администрацией.</div>';
             //5. Вход
             else {
-                setcookie('user_id', $login, time() + 60 * 60 * 24 * 90);
+                setcookie('user_id', $id, time() + 60 * 60 * 24 * 90);
+                setcookie('login', $login, time() + 60 * 60 * 24 * 90);
                 setcookie('roleid', $roleid, time() + 60 * 60 * 24 * 90);
                 header("Location: techsupportroute.php");
             }
