@@ -126,3 +126,12 @@ body {
 
 /*Контент*/
 
+.content-address-link {
+    text-decoration: none;
+    color: black;
+}
+
+.content-address-link:hover {
+    text-decoration: none;
+    color: #1967d2;
+}

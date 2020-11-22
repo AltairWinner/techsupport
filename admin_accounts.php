@@ -99,53 +99,13 @@ $login = $_COOKIE['login'];
                 <div class='divTableCell'>$email</div>
                 <div class='divTableCell'>$rolestring</div>
                 <div class='divTableCell'>
-                    <a href='admin_editaccount.php' class='linkDesign'>Редактировать</a>
-                
+
+                <a href='admin_editaccount.php?id=$luserid' class='linkDesign'>Редактировать</a>
+
+                </form>
+                </div>
                 </div>
             ");
-            /*
-            Перенести в редактирование профиля. Возможно. А может и стереть куда подальше.
-            echo ("
-            <div class='divTableRow'>
-                <div class='divTableCell'>$luserid</div>
-                <div class='divTableCell'>$llogin</div>
-                <div class='divTableCell'>$email</div>
-                <div class='divTableCell'>
-
-                <select name='newroleid' class='dropdown-design'>"
-            );
-            if($roleid == 0) 
-            {
-                echo("
-                <option value='0' selected>Не активирована</option>
-                <option value='1'>Администратор</option>
-                <option value='2'>Работник техподдержки</option>
-                ");
-            }
-            else if($roleid == 1) 
-            {
-                echo("
-                <option value='0'>Не активирована</option>
-                <option value='1' selected>Администратор</option>
-                <option value='2'>Работник техподдержки</option>
-                ");
-            }
-            else if($roleid == 2) 
-            {
-                echo("
-                <option value='0' >Не активирована</option>
-                <option value='1'>Администратор</option>
-                <option value='2' selected>Работник техподдержки</option>
-                ");
-            }
-                    
-
-            echo ("
-                </select>
-                </div>
-                <div class='divTableCell'>Кнопки</div>
-            </div>
-            ");*/
         }
 
         echo "</div>";

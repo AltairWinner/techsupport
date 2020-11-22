@@ -41,6 +41,7 @@ if (isset($_POST['btnLogin'])) {
         //1. Получаем данные из БД
         $query = "SELECT * FROM users WHERE account_login='$login';";
         $queryResult = mysqli_query($link, $query);
+        if($queryResult->num_rows!=0) {
         $row = mysqli_fetch_assoc($queryResult);
 
         //2. Записываем результаты в переменные
@@ -62,7 +63,9 @@ if (isset($_POST['btnLogin'])) {
         } else {
             echo '<div class="php-message">Неверное имя пользователя или пароль.</div>';
         }
-
+    }
+    else 
+    echo '<div class="php-message">Неверное имя пользователя или пароль.</div>';
         CloseConnection($link);
     }
 }

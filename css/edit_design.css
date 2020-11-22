@@ -1,0 +1,72 @@
+.divTable{
+	display: table;
+    width: 60%;
+    border: none;
+    
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+.divTableRow {
+    display: table-row;
+    box-shadow: 0 2px 2px -2px #333;
+
+}
+
+.divTableCell {	
+	display: table-cell;
+	padding: 1em 0.5em;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.linkDesign {
+    text-decoration: none;
+    color: #1967d2;  
+}
+
+.linkDesign:hover {
+    color: #0f376e; 
+}
+
+.button-save {
+    border: rgba(63, 63, 63, 0.315) solid 1px;
+    border-radius: 12px;
+    padding: 0.6em;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+.button-save:hover {
+    border: #aabfe4 solid 1px;
+    background-color: #aabfe4;
+    cursor: pointer;
+}
+
+.button-danger {
+    border: rgba(63, 63, 63, 0.315) solid 1px;
+    border-radius: 12px;
+    padding: 0.6em;
+
+    color: red;
+    font-size: 0.9em;
+}
+
+.button-danger a{
+    color: red;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+.button-danger:hover {
+    border: rgb(209, 0, 0) solid 1px;
+    background-color: rgb(209, 0, 0);
+    cursor: pointer;
+    color: white;
+}
+
+.button-danger:hover a{
+    color: white; 
+}

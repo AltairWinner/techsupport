@@ -12,6 +12,7 @@
 .divTableRow {
     display: table-row;
     box-shadow: 0 2px 2px -2px #333;
+    width: 100%;
 }
 
 .divTableRow:hover {
