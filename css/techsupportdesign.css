@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0;
+}
+/*Заголовок*/
+header {
+    
+    width: 100%;
+    width: 100%;
+}
+.header-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 2px 2px -2px #333;
+    height: auto;
+}
+.logout-button-design {
+    padding: 0.4em;
+    border-radius: 15px;
+}
+.logout-button-design:hover {
+    background-color:  #2978e61e;;
+}
+.header-left {
+    width: 20%;
+    box-shadow: 2px 0px 2px -2px #333;
+}
+
+.header-center {
+    width: 60%;
+    box-shadow: 2px 0px 2px -2px #333;
+}
+
+.header-right {
+    width: 20%;
+    box-shadow: 2px 0px 2px -2px #333;
+}
+.header-text {
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+.link-design {
+    text-decoration: none;
+    color: #1967d2;  
+    font-size: 1em;
+}
+
+.link-design:hover {
+    color: #0f376e; 
+}
+
+
+/*Контент*/
+.content-wrapper {
+    width: 70%;
+    align-self: center;
+    margin-top: 2em;
+    height: 90%;
+}
+
+
+.button-design {
+    border: rgba(63, 63, 63, 0.315) solid 1px;
+    border-radius: 12px;
+    padding:  0.6em 2.5em;
+    font-size: 0.9em;
+    width:  max-content;
+}
+.button-design a {
+    text-decoration: none;
+    color: black;
+}
+.button-design:hover {
+    border: #aabfe4 solid 1px;
+    background-color: #aabfe4;
+    cursor: pointer;
+}
+
+
+/*Чат*/
+.scrollable-chat {
+    max-height: 70%;
+    overflow: auto;
+    border: rgba(63, 63, 63, 0.315) solid 1px;
+} 
+
+.input-field {
+    width: 100%;
+    min-height: 5em;
+    outline: none;
+    resize: none;
+
+    padding: 0.5em;
+    margin: 0 0 1em 0;
+}
+
+.message {
+    padding: 0.6em;
+    box-shadow: 0 2px 2px -2px #333;
+}
+.message-header {
+    display: flex;
+    flex-flow: row;
+}
+
+.message-author {
+    text-decoration: solid;
+}
+
+.message-text {
+    margin: 0.3em;
+}
+
+.time {
+    margin-left: 2em;
+    font-size: 0.8em;
+    color: rgba(73, 73, 73, 0.555);
+}
+
+.ticket-theme {
+    font-size: 1.1em;
+    margin: 1em 0;
+
+}
+
+.horizontal-flex-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+}
+.underlined-block {
+    box-shadow: 0 2px 2px -2px #333;
+}
+
+.ticket-title{
+    font-size: 1.3em;
+    color: #333;
+}
+.ticket-status {
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+
+.button-danger {
+    border: rgba(63, 63, 63, 0.315) solid 1px;
+    border-radius: 12px;
+    padding: 0.6em 1.3em;
+
+    color: red;
+    font-size: 0.9em;
+}
+
+.button-danger a{
+    color: red;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+.button-danger:hover {
+    border: rgb(209, 0, 0) solid 1px;
+    background-color: rgb(209, 0, 0);
+    cursor: pointer;
+    color: white;
+}
+
+.button-danger:hover a{
+    color: white; 
+}
+
+.return-button {
+    margin-bottom: 2em;
+    font-size: 1.1em;
+}

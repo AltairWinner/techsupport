@@ -42,14 +42,11 @@ CloseConnection($link);
             <div class="menu-header-text">Техподдержка</div>
             <div class="menu-container">
                 <a href="admin.php" class="menu-link-text">
-                    <div class="menu-link-button">Статистика</div>
+                    <div class="menu-link-button">Главная</div>
                 </a>
                 <a href="admin_accounts.php" class="menu-link-text-selected">
 
                     <div class="menu-link-button-selected">Пользователи</div>
-                </a>
-                <a href="tickets.php" class="menu-link-text">
-                    <div class="menu-link-button">Заявки</div>
                 </a>
             </div>
         </div>

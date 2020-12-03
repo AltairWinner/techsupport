@@ -16,9 +16,8 @@ $login = $_COOKIE['login'];
 <html>
 
 <head>
-    <title>Статистика - Панель администратора</title>
+    <title>Панель администратора</title>
     <link rel="stylesheet" type="text/css" href="css/systemdesign.css" />
-
 </head>
 
 <body>
@@ -27,14 +26,11 @@ $login = $_COOKIE['login'];
             <div class="menu-header-text">Техподдержка</div>
             <div class="menu-container">
             <a href="admin.php" class="menu-link-text-selected">
-                <div class="menu-link-button-selected">Статистика</div>
+                <div class="menu-link-button-selected">Главная</div>
             </a>
             <a href="admin_accounts.php" class="menu-link-text">
                 
                 <div class="menu-link-button">Пользователи</div>
-            </a>
-            <a href="tickets.php" class="menu-link-text">
-                <div class="menu-link-button">Заявки</div>
             </a>
             </div>
         </div>
@@ -56,8 +52,8 @@ $login = $_COOKIE['login'];
 
 
     <div class="page-content">
-        <h2>Статистика</h2>
-        <p>Здесь, возможно, будет какая-то статистика, если будет время на её реализацию.</p>
+        <h2>Главная</h2>
+        <p>Здесь, возможно, будет какая-то Главная, если будет время на её реализацию.</p>
     </div>
 </body>
 

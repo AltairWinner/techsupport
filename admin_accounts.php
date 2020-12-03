@@ -27,14 +27,11 @@ $login = $_COOKIE['login'];
             <div class="menu-header-text">Техподдержка</div>
             <div class="menu-container">
                 <a href="admin.php" class="menu-link-text">
-                    <div class="menu-link-button">Статистика</div>
+                    <div class="menu-link-button">Главная</div>
                 </a>
                 <a href="admin_accounts.php" class="menu-link-text-selected">
 
                     <div class="menu-link-button-selected">Пользователи</div>
-                </a>
-                <a href="tickets.php" class="menu-link-text">
-                    <div class="menu-link-button">Заявки</div>
                 </a>
             </div>
         </div>
@@ -60,6 +57,8 @@ $login = $_COOKIE['login'];
         <p>На данной странице выведены все пользователи, существующие в системе. Вы можете просматривать
             информацию о пользователях, а также назначать им роли.
         </p>
+        <p>Также Вы можете добавить нового пользователя.<p>
+            <a href="admin_addaccount.php" class="linkDesign"> Добавить нового пользователя</a>
 
         <?php
         //Получаем данные о пользователях
