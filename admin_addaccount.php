@@ -120,7 +120,8 @@ include "php/roleconverter.php";
             $link = OpenConnection(); //Соединяемся с БД
             $query_result = mysqli_query($link, "SELECT * FROM users WHERE account_login = $llogin OR email=$email");
 
-            if(mysqli_num_rows($query_result) != 0) {
+            //Warning: Cannot modify header information - headers already sent by
+            /*if(mysqli_num_rows($query_result) != 0) {
                 $row = mysqli_fetch_assoc($query_result);
                 if($row['account_login']==$llogin)
                     echo '<div class="php-message">Имя пользователя уже занято.</div>';
@@ -128,7 +129,7 @@ include "php/roleconverter.php";
                     echo '<div class="php-message">На данную электронную почту уже есть созданная учетная запись.</div>';
                     
                 exit;
-            }
+            }*/
 
             if ($login === '' || $password === '' || strlen($password) == 0 || $password_confirm === '' || $email === '') {
                 echo '<div class="php-message">Пожалуйста, заполните все поля.</div>';
@@ -137,11 +138,12 @@ include "php/roleconverter.php";
                     $hash = password_hash($password, PASSWORD_DEFAULT);
 
                     $sql = "INSERT INTO users (account_login, password_hash, email, roleid) VALUES ('$llogin', '$hash', '$email', $newroleid)";
-
-                    $link->query($sql) === TRUE;
+                    $link = OpenConnection();
+                    mysqli_query($link, $sql);
                     header('Location: admin_accounts.php');
-                    exit();
                     CloseConnection($link);
+                    exit();
+                    
                 } else
                     echo '<div class="php-message">Пароли должны совпадать.</div>';
             }

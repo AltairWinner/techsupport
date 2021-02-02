@@ -135,3 +135,34 @@ body {
     text-decoration: none;
     color: #1967d2;
 }
+
+.input-field-theme{
+    width: 80%;
+    min-height: 5em;
+    outline: none;
+    resize: none;
+
+    padding: 0.5em;
+    margin: 0 0 1em 0;
+}
+.input-field-theme {
+    width: 40%;
+    min-height: 0.5em;
+    outline: none;
+    resize: none;
+    font-size: 1.2em;
+
+    padding: 0.5em;
+    margin: 0 0 1em 0;
+    resize: none;
+}
+.input-field-text {
+    width: 80%;
+    min-height: 10em;
+    outline: none;
+    resize: none;
+    font-size: 1.2em;
+
+    padding: 0.5em;
+    margin: 0 0 1em 0;
+}

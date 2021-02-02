@@ -50,11 +50,14 @@ if (isset($_POST['btnLogin'])) {
         $id = $row['user_id'];
         //3. Проверяем правильность пароля
         if (password_verify($password, $hash)) {
-            //4. Проверяем, активирован ли аккаунт. Аккаунты с ролью 0 являются не активированными.
-            if ($roleid == 0)
-                echo '<div class="php-message">Учетная запись не активирована. <br>Пожалуйста, попробуйте войти позже, либо свяжитесь с администрацией.</div>';
-            //5. Вход
-            else {
+            // здесь раньше была проверка, активирован ли аккаунт
+            if ($roleid == 0) {
+                setcookie('user_id', $id, time() + 60 * 60 * 24 * 90);
+                setcookie('login', $login, time() + 60 * 60 * 24 * 90);
+                setcookie('roleid', $roleid, time() + 60 * 60 * 24 * 90);
+                header("Location: index.php");
+            } else {
+
                 setcookie('user_id', $id, time() + 60 * 60 * 24 * 90);
                 setcookie('login', $login, time() + 60 * 60 * 24 * 90);
                 setcookie('roleid', $roleid, time() + 60 * 60 * 24 * 90);

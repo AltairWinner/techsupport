@@ -49,7 +49,7 @@ if (isset($_POST['btnRegister']))
             $sql="INSERT INTO users (account_login, password_hash, email, roleid) VALUES ('$login', '$hash', '$email', 0)";
 
             $link->query($sql) === TRUE;
-            header("Location: techsupport_registrationsuccess.php");  //TODO: проверить работу!
+            header("Location: index.php");  //TODO: проверить работу!
             exit();
             CloseConnection($link);
         }
@@ -57,4 +57,6 @@ if (isset($_POST['btnRegister']))
             echo '<div class="php-message">Пароли должны совпадать.</div>';  
     }
 }
+
+
 ?>

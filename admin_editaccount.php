@@ -124,32 +124,33 @@ CloseConnection($link);
                 </div>
             </div>
             <input type="submit" class='button-save' value='Сохранить изменения' />
-            </form>
-            
-            <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST') {  
-        $newlogin = trim(htmlspecialchars($_POST['newlogin']));
-        $newemail = trim(htmlspecialchars($_POST['newemail']));
-        $newroleid=trim(htmlspecialchars($_POST['newroleid']));
-        $link = OpenConnection();
-        $sql = "UPDATE `users` SET `account_login`='$newlogin', `email`='$newemail', `roleid`='$newroleid' WHERE `users`.`user_id`='$edited_account_id'";
-        mysqli_query($link, $sql);
+        </form>
 
-        CloseConnection($link);
-        header('Location: admin_accounts.php');
-    }
-    ?>
-    <h3>Действия</h3>
-            <button class='button-danger'>
-                <?php echo "<a href='admin_deleteaccount.php?id=$edited_account_id'>" ?>
-                Удалить аккаунт
-                </a>
-            </button>
-       
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $newlogin = trim(htmlspecialchars($_POST['newlogin']));
+            $newemail = trim(htmlspecialchars($_POST['newemail']));
+            $newroleid = trim(htmlspecialchars($_POST['newroleid']));
+            $link = OpenConnection();
+            $sql = "UPDATE `users` SET `account_login`='$newlogin', `email`='$newemail', `roleid`='$newroleid' WHERE `users`.`user_id`='$edited_account_id'";
+            mysqli_query($link, $sql);
+
+            CloseConnection($link);
+            header('Location: admin_accounts.php');
+        }
+        ?>
+        <h3>Действия</h3>
+        <?php echo "<a href='admin_deleteaccount.php?id=$edited_account_id'>" ?>
+        <button class='button-danger'>
+            Удалить аккаунт
+        </button>
+        </a>
+
     </div>
 
 
 
 
 </body>
+
 </html>

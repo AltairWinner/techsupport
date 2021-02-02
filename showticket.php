@@ -4,7 +4,7 @@ if (!isset($_COOKIE['user_id'])) {
     header('Location: techsupportlogin.php');
     exit;
 }
-if ($_COOKIE['roleid'] != 2) {
+if ($_COOKIE['roleid'] != 2 ) {
     header('Location: techsupport_logout.php');
     exit;
 }
@@ -65,7 +65,7 @@ if($workerid != $id) {
 
                                                             $statusname = ConvertStatusIdToName($status);
 
-                                                            $userlogin_queryresult = mysqli_query($link, "SELECT username FROM users WHERE user_id = $userid");
+                                                            $userlogin_queryresult = mysqli_query($link, "SELECT account_login FROM users WHERE user_id = $userid");
                                                             if ($userlogin_queryresult != false) {
                                                                 if (mysqli_num_rows($userlogin_queryresult) != 0) {
                                                                     $userlogin_queryrow = mysqli_fetch_assoc($userlogin_queryresult);
@@ -155,6 +155,8 @@ if($workerid != $id) {
 
                             $link = OpenConnection();
                             $err = mysqli_multi_query($link, $sql);
+                            header("Location: tickets.php");
+
                         }
                     }
                     ?>
